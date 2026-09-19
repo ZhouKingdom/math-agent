@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.cache/
+.venv/
+
+# Local datasets, checkpoints, and logs.
+data/raw/
+data/processed/
+checkpoints/
+logs/
+wandb/
+
+# Large upstream assets are downloaded separately.
+models/

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "math-agent"
+version = "0.1.0"
+description = "Reproducible slime baselines for tool-using agents"
+requires-python = ">=3.11"
+dependencies = [
+  "pyarrow>=18",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+]
+
+[project.scripts]
+math-agent-data = "math_agent.data:main"
+
+[tool.setuptools.packages.find]
+include = ["math_agent*"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+testpaths = ["tests"]
